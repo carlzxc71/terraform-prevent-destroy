@@ -7,11 +7,6 @@ resource "azurerm_mssql_database" "this" {
   read_scale     = true
   sku_name       = "S0"
   zone_redundant = true
-  enclave_type   = "VBS"
-
-  tags = {
-    foo = "bar"
-  }
 
   lifecycle {
     prevent_destroy = true
